@@ -2,33 +2,34 @@
 
 A real-time accessibility application that converts between **Text**, **Speech**, **Braille**, and **Camera Gestures**. This project empowers visually and hearing-impaired individuals by offering seamless multimodal communication tools.
 
-🔗 **Live Demo**: [https://v0-hand-gesture-recognition-one.vercel.app/](https://v0-hand-gesture-recognition-one.vercel.app/)
+🔗 **Live Demo**: [Brallie](https://v0-hand-gesture-recognition-one.vercel.app/)
 
 ---
 
 ## 📁 Project Structure
 
 📦braille-translator
+📦 braille-translator
 ├── 📁 app
-│ ├── developers.tsx # Developer info or credits page
+│ ├── developers.tsx # Developer info page
 │ ├── globals.css # Global CSS styles
-│ ├── layout.tsx # Application layout wrapper
-│ ├── page.tsx # Main landing page
+│ ├── layout.tsx # App layout component
+│ └── page.tsx # Landing page
 ├── 📁 components
-│ ├── braille-to-text.tsx # Converts Braille input to text
-│ ├── gesture-recognition.tsx # Detects hand gestures via webcam
-│ ├── speech-to-braille.tsx # Converts spoken input to Braille
-│ ├── text-to-braille.tsx # Converts text to Braille output
-│ ├── theme-provider.tsx # Theme configuration and context
+│ ├── braille-to-text.tsx # Braille to Text converter
+│ ├── gesture-recognition.tsx # Gesture recognition via webcam
+│ ├── speech-to-braille.tsx # Speech to Braille converter
+│ ├── text-to-braille.tsx # Text to Braille converter
+│ └── theme-provider.tsx # Theme context provider
 ├── 📁 hooks
 │ ├── use-mobile.tsx # Hook for mobile responsiveness
-│ ├── use-toast.ts # Toast/notification handler
+│ └── use-toast.ts # Hook for toast notifications
 ├── 📁 lib
-│ ├── braille-utils.ts # Core logic for Braille encoding/decoding
-│ ├── common-words.ts # Frequently used words in Braille
-│ ├── utils.ts # General utility functions
-├── 📁 public # Static assets
-├── 📁 styles # Project-wide CSS and styling
+│ ├── braille-utils.ts # Braille encoding/decoding logic
+│ ├── common-words.ts # Frequently used Braille words
+│ └── utils.ts # Utility functions
+├── 📁 public # Static assets (icons, images)
+├── 📁 styles # Global and Tailwind styles
 ├── .gitignore
 ├── components.json
 ├── next-env.d.ts
@@ -37,7 +38,7 @@ A real-time accessibility application that converts between **Text**, **Speech**
 ├── package.json
 ├── postcss.config.mjs
 ├── tailwind.config.ts
-├── tsconfig.json
+└── tsconfig.json
 
 
 
@@ -78,7 +79,8 @@ git clone https://github.com/YourUsername/your-repo-name.git
 cd braille-translator
 
 # Install dependencies
-npm install
+
+npm install --legacy-peer-deps
 
 # Run the development server
 npm run dev
